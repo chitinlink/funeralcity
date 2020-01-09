@@ -1,0 +1,173 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: sans-serif;
+  background: #000000;
+  color: #ffffff;
+
+  --muted: #616161;
+}
+
+a,
+a:visited,
+a:focus {
+  color: #ff2929;
+}
+
+#wrap {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+header {
+  margin-bottom: 1em;
+}
+
+.post {
+  font-family: Georgia, serif;
+  margin-bottom: 3em;
+  padding-top: 1em;
+  border-top: 2px dashed red;
+}
+
+.post img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.post p:last-child {
+  margin-bottom: 0;
+}
+
+.post .top {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--muted);
+  display: block;
+  text-align: center;
+}
+
+.post li {
+  list-style-type: "- ";
+  margin-bottom: 1em;
+}
+
+.tab {
+  display: inline-block;
+  width: 4ch;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 10px;
+  font-family: Arial, sans-serif;
+  font-size: 1ch;
+  text-decoration: underline;
+  color: #e26f6f;
+}
+
+nav {
+  margin: 1em auto;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  margin: 0 2ch;
+}
+
+#pages {
+  justify-content: flex-start;
+  font-family: Consolas, monospace;
+}
+
+#info {
+  text-align: justify;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Georgia, serif;
+}
+
+/* logo */
+
+.bow {
+  margin: 0 auto;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  min-width: 371px;
+}
+
+.bow > * {
+  position: relative;
+  cursor: default;
+  margin: 0 auto;
+}
+
+.ronpauls {
+  max-width: 172px;
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-style: italic;
+  left: -50px;
+  top: 32px;
+  color: var(--muted);
+  z-index: 200;
+}
+
+.his {
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.ronpauls:hover .his { opacity: 1; }
+
+.funeralcity {
+  max-width: 378px;
+  font-family: Georgia, serif;
+  font-size: 72px;
+  font-style: italic;
+  letter-spacing: -3px;
+}
+
+.deaths {
+  max-width: 139px;
+  top: -13px;
+  left: 74px;
+  color: var(--muted);
+  text-align: right;
+}
+
+.number {
+  font-family: Consolas, monospace;
+  z-index: 200;
+}
+
+.comma {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+  transition: width .2s, opacity .2s;
+}
+
+.deaths:hover .comma {
+  width: 1ch;
+  opacity: 1;
+}
