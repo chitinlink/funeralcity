@@ -30,9 +30,11 @@ fetch("posts.json")
 
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     top.innerHTML += `<time datetime="${entry.date.toISOString()}">${
-      entry.date.getUTCHours() + ":" + entry.date.getUTCMinutes() +
+      String(entry.date.getUTCHours()).padStart(2, 0) + ":" +
+      String(entry.date.getUTCMinutes()).padStart(2, 0) +
       " " + monthNames[entry.date.getUTCMonth()] +
-      " " + entry.date.getUTCDate() + " " + entry.date.getUTCFullYear()
+      " " + String(entry.date.getUTCDate()).padStart(2, 0) +
+      " " + entry.date.getUTCFullYear()
     }</time>`;
     if (i !== 0) {
       let diff =  Math.round((entry.date.getTime() - posts[i - 1].date.getTime()) / (1000 * 60 * 60 * 24));
