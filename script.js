@@ -26,7 +26,7 @@ fetch("posts.json")
   .then(posts => posts.map((entry, i) => {
     let top = document.createElement("div");
     top.className = "top";
-    top.innerHTML = `<a href="#${String(i + 1).padStart(2, 0)}">${String(i + 1).padStart(2, 0)}</a> • `;
+    top.innerHTML = `<a href="#${String(i + 1).padStart(2, 0)}">#${String(i + 1).padStart(2, 0)}</a> • `;
 
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     top.innerHTML += `<time datetime="${entry.date.toISOString()}">${

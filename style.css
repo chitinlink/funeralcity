@@ -4,8 +4,6 @@ body {
   min-height: 100vh;
   max-width: 100vw;
   font-family: sans-serif;
-  background: #000000;
-  color: #ffffff;
 
   --muted: #616161;
 }
@@ -13,7 +11,7 @@ body {
 a,
 a:visited,
 a:focus {
-  color: #ff2929;
+  color: #5a7bde;
 }
 
 #wrap {
@@ -36,7 +34,7 @@ header {
   display: block;
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .post p:last-child {
@@ -50,7 +48,7 @@ header {
   font-size: 10px;
   color: var(--muted);
   display: block;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .post li {
